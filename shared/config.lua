@@ -1,25 +1,3 @@
-# 🌱 VegMod
-Documentation relating to the spooni_vegmod.
-
-## 1. Installation
-spooni_vegmod works Standalone. 
-
-- Download the resource
-  - On [Github](https://github.com/Spooni-Development/spooni_vegmod)
-- Drag and drop the resource into your resources folder
-  - `spooni_vegmod`
-- Add this ensure in your server.cfg
-  - `ensure spooni_vegmod`
-- At the end
-  - Restart the server
-
-If you have any problems, you can always open a ticket in the [Spooni Discord](https://discord.gg/spooni).
-
-## 2. Usage
-Go to one of the configured black markets. There you can open the menu and buy and sell items and weapons, the more you sell, the more share you get from the black market until it possibly belongs to you and then only you can buy.
-
-## 3. For developers
-```lua
 Config = {}
 
 --Veg Modifiers Flags
@@ -55,4 +33,3 @@ Config.VegMods = {
         veg = { flag = All, type = VMT_Cull,} -- Veg Modifiers Flags/Types
     },
 }
-:::
