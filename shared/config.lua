@@ -23,13 +23,13 @@ local VMT_Decal = 32
 Config.VegMods = {
     { -- spooni_sd_farming Hall
         coords = vector3(2683.269, -840.933, 42.300), -- Coords
-        radius = 10.0, -- Raduis
+        radius = 10.0, -- Radius
         veg = { flag = All, type = VMT_Cull,} -- Veg Modifiers Flags/Types
     },
 
     { -- spooni_sd_farming Office
         coords = vector3(2694.118, -851.498, 42.312), -- Coords
-        radius = 5.0, -- Raduis
+        radius = 5.0, -- Radius
         veg = { flag = All, type = VMT_Cull,} -- Veg Modifiers Flags/Types
     },
 }
