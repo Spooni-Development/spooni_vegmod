@@ -22,7 +22,6 @@ This tool allows you to change the vegetation on the map.
 
 ## 3. For developers
 
-:::details Config.lua
 ```lua
 Config = {}
 
@@ -59,4 +58,4 @@ Config.VegMods = {
         veg = { flag = All, type = VMT_Cull,} -- Veg Modifiers Flags/Types
     },
 }
-:::
+```
