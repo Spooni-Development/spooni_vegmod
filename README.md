@@ -25,6 +25,8 @@ This tool allows you to change the vegetation on the map.
 ```lua
 Config = {}
 
+Config.DevMode = true
+
 --Veg Modifiers Flags
 local Debris = 1
 local Grass = 2
@@ -45,17 +47,18 @@ local VMT_Explode = 8
 local VMT_Push = 16
 local VMT_Decal = 32
 
-Config.VegMods = {
+Config.VegZones = {
     { -- spooni_sd_farming Hall
         coords = vector3(2683.269, -840.933, 42.300), -- Coords
         radius = 10.0, -- Radius
-        veg = { flag = All, type = VMT_Cull,} -- Veg Modifiers Flags/Types
+        distance = 50.0, -- View Distance
+        vegmod = { flag = All, type = VMT_Flatten,} -- Veg Modifiers Flags/Types
     },
-
     { -- spooni_sd_farming Office
-        coords = vector3(2694.118, -851.498, 42.312), -- Coords
-        radius = 5.0, -- Radius
-        veg = { flag = All, type = VMT_Cull,} -- Veg Modifiers Flags/Types
+        coords = vector3(2694.118, -851.498, 42.312),
+        radius = 5.0,
+        distance = 50.0, -- View Distance
+        vegmod = { flag = All, type = VMT_Flatten,}
     },
 }
 ```
