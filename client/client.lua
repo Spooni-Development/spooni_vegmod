@@ -6,6 +6,14 @@ local function Debug(...)
     end
 end
 
+local function AddVegModifierSphere(...)
+	return Citizen.InvokeNative(0xFA50F79257745E74,...)
+end
+
+local function RemoveVegModifierSphere(veg_modifier_sphere,p1)
+	return Citizen.InvokeNative(0x9CF1836C03FB67A2,Citizen.PointerValueIntInitialized(veg_modifier_sphere), p1)
+end
+
 if #Config.VegZones > 0 then
     Citizen.CreateThread(function()
         while true do
@@ -17,7 +25,7 @@ if #Config.VegZones > 0 then
 
                 if dist <= v.distance then
                     if not VegZones[k] then
-                        VegZones[k] = Citizen.InvokeNative(0xFA50F79257745E74, v.coords[1], v.coords[2], v.coords[3], v.radius, v.vegmod.flag, v.vegmod.type, 0) -- AddVegModifierSphere
+                        VegZones[k] = AddVegModifierSphere(v.coords[1], v.coords[2], v.coords[3], v.radius, v.vegmod.flag, v.vegmod.type, 0)
                     end
                     activeZones[k] = true
                 end
@@ -27,7 +35,7 @@ if #Config.VegZones > 0 then
                 if not activeZones[k] then
                     Debug(VegZones[k])
                     Debug(Citizen.PointerValueIntInitialized(VegZones[k]))
-                    Citizen.InvokeNative(0x9CF1836C03FB67A2, Citizen.PointerValueIntInitialized(VegZones[k]), 0) -- RemoveVegModifierSphere
+                    RemoveVegModifierSphere(VegZones[k], 0)
                     VegZones[k] = nil
                 end
             end
@@ -44,6 +52,6 @@ AddEventHandler('onResourceStop', function(resourceName)
 
     for k, v in pairs(VegZones) do
         Debug('All vegetation modifiers have been removed')
-        Citizen.InvokeNative(0x9CF1836C03FB67A2, Citizen.PointerValueIntInitialized(VegZones[k]), 0) -- RemoveVegModifierSphere
+        RemoveVegModifierSphere(VegZones[k], 0)
     end
 end)
