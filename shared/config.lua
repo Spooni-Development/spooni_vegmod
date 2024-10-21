@@ -23,7 +23,6 @@ local VMT_Push = 16
 local VMT_Decal = 32
 local AllModifiers = VMT_Cull + VMT_Flatten + VMT_FlattenDeepSurface + VMT_Explode + VMT_Push + VMT_Decal
 
-
 Config.VegZones = {
     { -- spooni_sd_farming Hall
         coords = vector3(2683.269, -840.933, 42.300), -- Coords

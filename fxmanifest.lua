@@ -5,6 +5,7 @@ lua54 'yes'
 
 author 'Spooni'
 description 'VegMod Script'
+version '2'
 
 server_scripts {
 	"server/*.lua",
