@@ -28,12 +28,12 @@ Config.VegZones = {
         coords = vector3(2683.269, -840.933, 42.300), -- Coords
         radius = 10.0, -- Radius
         distance = 50.0, -- View Distance
-        vegmod = { flag = AllFlags, type = AllModifiers,} -- Veg Modifiers Flags/Types
+        vegmod = { flag = AllFlags, type = AllModifiers } -- Veg Modifiers Flags/Types
     },
     { -- spooni_sd_farming Office
         coords = vector3(2694.118, -851.498, 42.312),
         radius = 5.0,
         distance = 50.0,
-        vegmod = { flag = AllFlags, type = AllModifiers,}
+        vegmod = { flag = AllFlags, type = AllModifiers }
     },
 }
