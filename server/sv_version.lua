@@ -1,3 +1,8 @@
+local resourcename = GetCurrentResourceName()
+local version = GetResourceMetadata(resourcename, "version", 0)
+local isMapping = false
+local escrow = false
+
 Citizen.CreateThread(function()
     Wait(5000)
     
